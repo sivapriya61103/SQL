@@ -1,0 +1,33 @@
+DESCRIPTION:
+
+The question you were given is asking you to write an SQL query to retrieve data from a table that meets certain conditions. 
+In this case, the condition is that the "country" column in the "customers" table must be equal to "USA" and the "age" column must be greater than 25.
+The query SELECT * FROM customers WHERE country = 'USA' AND age > 25 retrieves all rows from the "customers" table where the "country" column is equal to "USA" and the "age" column is greater than 25.
+The query uses the WHERE clause to specify the conditions that must be met, and the AND operator to combine the conditions. 
+The asterisk (*) in the SELECT statement means that all columns in the "customers" table will be returned.
+
+SQL QUERY:
+
+
+--CREATING A TABLE CALLED CUSTOMERS
+
+create table customers(customer_id int,customer_name varchar(10),country varchar(10),age int);
+
+--INSRETING THE VALUES INTO THE CUSTOMER TABLE
+
+insert into customers values(1,'John Smith','USA',30);
+insert into customers values(2,'Jane Doe','Canada',42);
+insert into customers values(3,'Alex Kim','USA',20);
+insert into customers values(4,'Emily Chen','China',28);
+insert into customers values(5,'Tom Johnson','USA',37);
+insert into customers values(6,'Lisa Lee','Korea',24);
+
+--QUERY FOR RETRIVING DATA FROM THE TABLE CUSTOMERS
+
+select * from customers where country = 'USA'and age > 25;
+
+OUTPUT:
+
+customer_id	customer_name	country	age
+1	        John Smith	USA	30
+5	        Tom Johnson	USA	37
